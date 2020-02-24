@@ -14,13 +14,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-//    private val VIDEO_SAMPLE = "samplesong"
+    private val VIDEO_SAMPLE = "samplesong"
     private var mVideoView: VideoView? = null
     private var mCurrentPosition = 0
     private val PLAYBACK_TIME = "play_time"
 
-    private val VIDEO_SAMPLE1 =
-        "https://player.vimeo.com/video/291648067?title=0&portrait=0&byline=0&autoplay=1"
+//    private val VIDEO_SAMPLE1 =
+//        "https://player.vimeo.com/video/291648067?title=0&portrait=0&byline=0&autoplay=1"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initializePlayer() {
         buffering_textview.visibility = VideoView.VISIBLE
-        val videoUri = getMedia(VIDEO_SAMPLE1)
+        val videoUri = getMedia(VIDEO_SAMPLE)
         mVideoView?.setVideoURI(videoUri)
         if (mCurrentPosition > 0) {
             mVideoView?.seekTo(mCurrentPosition)
